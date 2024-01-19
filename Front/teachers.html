@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/teachers.js"></script>
+    <title>Integration - Teachers</title>
+</head>
+
+<body>
+    <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="label">&#9776; </label>
+        <div class="menu">
+            <li><a href="students.html">Students</a></li>
+            <li><a href="teachers.html">Teachers</a></li>
+        </div>
+    </ul>
+    <form>
+        <legend>Teachers</legend>
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" />
+        </p>
+        <p>
+            <label for="tia">TIA:</label>
+            <input type="text" id="tia" />
+        </p>
+        <p>
+            <label for="workload">Workload:</label>
+            <input type="text" id="workload" />
+        </p>
+
+        <p>
+            <label for="titration">Titration:</label>
+            <input type="text" id="titration" />
+        </p>
+
+        <button id="button" onclick="insertTeacher()">Insert</button>
+
+    </form>
+
+    <section id="content"></section>
+</body>
+
+</html>
