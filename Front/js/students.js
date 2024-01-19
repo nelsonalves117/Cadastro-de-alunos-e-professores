@@ -38,7 +38,7 @@ function insertStudent() {
         tia: document.getElementById('tia').value.toUpperCase(),
         course: document.getElementById('course').value.toUpperCase()
     }
-    if (typeof student.tia !== Number) {
+    if (isNaN(student.tia)) {
         alert("TIA deve ser um número");
         return;
     }
