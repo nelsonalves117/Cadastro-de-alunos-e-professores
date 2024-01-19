@@ -41,6 +41,11 @@ function insertTeacher() {
         titration: document.getElementById('titration').value.toUpperCase()
     }
 
+    if (isNaN(teacher.tia)) {
+        alert("TIA deve ser um número");
+        return;
+    }
+
     const url = BASE_URL + COMPLETE_TEACHER_URL;
 
     callAPI(url, "POST", function (status, response) {

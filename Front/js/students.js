@@ -38,7 +38,10 @@ function insertStudent() {
         tia: document.getElementById('tia').value.toUpperCase(),
         course: document.getElementById('course').value.toUpperCase()
     }
-
+    if (isNaN(student.tia)) {
+        alert("TIA deve ser um número");
+        return;
+    }
     const url = BASE_URL + COMPLETE_STUDENT_URL;
 
     callAPI(url, "POST", function (status, response) {
@@ -61,6 +64,7 @@ function clear() {
 function deleteStudent(tia) {
     const resp = confirm("Deseja realmente apagar o aluno com tia: " + tia + "?");
     if (resp) {
+        console.log(resp);
         const url = BASE_URL + COMPLETE_STUDENT_URL + "/" + tia;
         callAPI(url, "DELETE", () => {
             readAll();
